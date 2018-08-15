@@ -8,8 +8,17 @@
 #ifndef LVGL_ELEMENTS_CONSOLEVIEW_H_
 #define LVGL_ELEMENTS_CONSOLEVIEW_H_
 
+#include "config.h"
+
+extern "C" {
+#if MBED_CONF_LVGL_ELEMENTS_MBED_BUILD
 #include "lvgl.h"
-#include "string.h"
+#else
+#include "../lvgl.h"
+#endif
+}
+
+#include <stdint.h>
 
 #if MBED_CONF_LVGL_ELEMENTS_USE_CONSOLE_VIEW
 
@@ -27,21 +36,24 @@ public:
 	ConsoleView(lv_obj_t* parent, int16_t number_of_lines);
 	virtual ~ConsoleView();
 
-	void print(std::string str);
-	void info(std::string str);
-	void warning(std::string str);
-	void error(std::string str);
+	void print(const char* str);
+	void info(const char* str);
+	void warning(const char* str);
+	void error(const char* str);
 
 	void show(void);
 	void hide(void);
 
 	void set_position(int16_t x, int16_t y);
+	void set_width(int16_t w);
 
 	void set_font(lv_font_t* font);
 
+	lv_obj_t* get_obj(void);
+
 protected:
 
-	void add_text(std::string str, lv_style_t* style);
+	void add_text(const char* str, lv_style_t* style);
 
 protected:
 

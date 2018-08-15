@@ -1,6 +1,11 @@
 {
 	"name": "lvgl-elements",
 	"config": {
+		"mbed_build": {
+			"help": "Do not disable this when using the mbed build system!",
+			"value": 1,
+			"required": true
+		},
 		"use_console_view" : {
 			"help": "Enable the ConsoleView element",
 			"value": 1
