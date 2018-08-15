@@ -1,0 +1,13 @@
+{
+	"name": "lvgl-elements",
+	"config": {
+		"use_console_view" : {
+			"help": "Enable the ConsoleView element",
+			"value": 1
+		},
+		"console_view_default_font": {
+			"help": "ConsoleView default font",
+			"value": "lv_font_dejavu_20"
+		}
+	}
+}
