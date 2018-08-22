@@ -24,7 +24,7 @@ ConsoleView::ConsoleView(lv_obj_t* parent, int16_t number_of_lines) : num_lines(
 	console_style.body.padding.hor = 0;
 	console_style.body.padding.inner = 0;
 	console_style.body.padding.ver = 0;
-	console_style.text.font = &MBED_CONF_LVGL_ELEMENTS_CONSOLE_VIEW_DEFULAT_FONT;
+	console_style.text.font = &MBED_CONF_LVGL_ELEMENTS_CONSOLE_VIEW_DEFAULT_FONT;
 	console_style.text.color = LV_COLOR_WHITE;
 
 	lv_style_copy(&info_style, &console_style);
