@@ -10,13 +10,7 @@
 
 #include "config.h"
 
-extern "C" {
-#if MBED_CONF_LVGL_ELEMENTS_MBED_BUILD
 #include "lvgl.h"
-#else
-#include "../lvgl.h"
-#endif
-}
 
 #include <stdint.h>
 
